@@ -1,0 +1,52 @@
+Components:
+Main Class (Main.java):
+
+Responsible for coordinating the overall process.
+Handles file reading, data processing, and report generation.
+Animal Class (Animal.java):
+
+Represents the basic structure of an animal.
+Contains encapsulated properties for name, age, and species.
+Provides constructors, getters, and setters for accessing and modifying properties.
+Subclasses (Hyena.java, Lion.java, Tiger.java, Bear.java):
+
+Subclasses of the Animal class, representing specific types of animals.
+Contains additional properties and methods specific to each animal type.
+Data Structures:
+ArrayList (ArrayList<Animal>):
+
+Used for storing instances of different animal types.
+Enables dynamic resizing and easy iteration over animal instances.
+HashMap (HashMap<String, Integer>):
+
+Used for counting the occurrences of each species.
+Key-value pairs: Species name (String) -> Count of occurrences (Integer).
+Interactions:
+Reading Animal Data:
+
+Main class reads data from two input files: animalNames.txt and arrivingAnimals.txt.
+The data is processed line by line using BufferedReader.
+Creating Animal Instances:
+
+Animal instances are created based on the data read from the files.
+Factory method (createAnimal()) is used to dynamically instantiate different animal types based on the species.
+Counting Species:
+
+HashMap (speciesCount) is used to count the occurrences of each species.
+During the creation of animal instances, the count of each species is updated in the HashMap.
+Generating Report:
+
+Animal details are written to an output file (newAnimals.txt) along with the count of each species.
+BufferedWriter is used to write the report to the file.
+Error Handling:
+
+IOExceptions are caught and handled gracefully to ensure robustness.
+Class Relationships:
+The Animal class serves as the superclass for Hyena, Lion, Tiger, and Bear.
+The subclasses inherit properties and methods from the Animal class and add specific features.
+The Main class orchestrates the process by coordinating interactions between data reading, processing, and report generation components.
+Design Considerations:
+Encapsulation is maintained to ensure data integrity and modularity.
+Inheritance and polymorphism are leveraged to support varying features of different animal types.
+The use of ArrayList and HashMap provides efficient data storage and manipulation.
+Error handling mechanisms are implemented to handle potential file I/O errors gracefully.
